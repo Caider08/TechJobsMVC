@@ -11,7 +11,7 @@
                        name="searchType"
                        id="@column.Key"
                        value="@column.Key" 
-                       checked="@column.Key == 'all''"/>
+                       checked="@(column.Key == ViewBag.selection)"  />
                 <label for="@column.Key">@column.Value</label>
             </span>
         }
@@ -40,7 +40,7 @@
             @foreach (KeyValuePair<string, string> kvp in row)
             {
                 <tr>
-                    <td>@kvp.Key</td>
+                    <td>@kvp.Key.ToUpper()</td>
                     <td>@kvp.Value</td>
                 </tr>
             }

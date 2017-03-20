@@ -13,7 +13,7 @@
             @foreach (KeyValuePair<string, string> kvp in row)
             {
                 <tr>
-                    <td>@kvp.Key</td>
+                    <td>@kvp.Key.ToUpper()</td>
                     <td>@kvp.Value</td>
                 </tr>
             }
